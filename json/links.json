@@ -14,18 +14,18 @@
     {
         "name": "Github",
         "color": "gray",
-        "icon": "octopus",
+        "icon": "octopuss",
         "url": "https://google.com"
 	},
    {
         "name": "Twitter",
-        "color": "navy",
+        "color": "turquoise",
         "icon": "twitter",
         "url": "https://google.com"
 	},
   {
         "name": "Facebook",
-        "color": "teal",
+        "color": "cobalt",
         "icon": "facebook",
         "url": "https://google.com"
 	},
