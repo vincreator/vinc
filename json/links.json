@@ -1,20 +1,20 @@
 [
     {
         "name": "Telegram",
-        "color": "blue",
-        "icon": "#0088cc",
+        "color": "#0088cc",
+        "icon": "telegram",
         "url": "https://t.me/Namexon"
 	},
     {
         "name": "Instagram",
-        "color": "red",
-        "icon": "#bc2a8d",
+        "color": "#bc2a8d",
+        "icon": "instagram",
         "url": "https://google.com"
 	},
     {
         "name": "Github",
         "color": "black",
-        "icon": "octopus",
+        "icon": "octo-puss",
         "url": "https://google.com"
 	},
    {
