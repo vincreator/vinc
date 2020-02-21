@@ -17,17 +17,11 @@
         "icon": "github-face",
         "url": "https://github.com/vincreator"
 	},
-   {
+    {
         "name": "Twitter",
         "color": "#00acee",
         "icon": "twitter",
         "url": "https://twitter.com/vincreator"
-	},
-  {
-        "name": "Line",
-        "color": "#00c300",
-        "icon": "line",
-        "url": "http://line.me/ti/p/ovin86"
 	},
     {
         "name": "Discord",
