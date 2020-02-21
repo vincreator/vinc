@@ -13,19 +13,19 @@
 	},
     {
         "name": "Github",
-        "color": "black",
+        "color": "gray",
         "icon": "git",
         "url": "https://google.com"
 	},
    {
         "name": "Twitter",
-        "color": "blue",
+        "color": "light blue",
         "icon": "twitter",
         "url": "https://google.com"
 	},
   {
         "name": "Facebook",
-        "color": "blue",
+        "color": "blue-green",
         "icon": "facebook",
         "url": "https://google.com"
 	},
