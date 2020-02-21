@@ -2,19 +2,19 @@
     {
         "name": "Telegram",
         "color": "blue",
-        "icon": "telegram",
+        "icon": "#0088cc",
         "url": "https://t.me/Namexon"
 	},
     {
         "name": "Instagram",
         "color": "red",
-        "icon": "instagram",
+        "icon": "#bc2a8d",
         "url": "https://google.com"
 	},
     {
         "name": "Github",
-        "color": "gray",
-        "icon": "octopuss",
+        "color": "black",
+        "icon": "octopus",
         "url": "https://google.com"
 	},
    {
@@ -31,7 +31,7 @@
 	},
     {
         "name": "Discord",
-        "color": "blue",
+        "color": "#7289da",
         "icon": "discord",
         "url": "https://google.com"
 	}
