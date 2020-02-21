@@ -19,13 +19,13 @@
 	},
    {
         "name": "Twitter",
-        "color": "light blue",
+        "color": "navy",
         "icon": "twitter",
         "url": "https://google.com"
 	},
   {
         "name": "Facebook",
-        "color": "blue-green",
+        "color": "teal",
         "icon": "facebook",
         "url": "https://google.com"
 	},
