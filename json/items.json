@@ -1,8 +1,7 @@
 [
     {
         "name": "Eunha BoT",
-        "description": "Eunha is a Discord music bot,focus on audio.
-click visit to invite this bot on your channel discord.",
+        "description": "Eunha is a Discord music bot,focus on audio. \n click visit to invite this bot to your channel on discord. \n have fun 😘",
         "image": "images/image1.jpg",
         "link": "https://discordapp.com/oauth2/authorize?client_id=610409589166571540&permissions=8&redirect_uri=https%3A%2F%2Fdiscordapp.com%2Foauth2%2Fauthorize%3Fclient_id%3D&scope=bot"
 	},
