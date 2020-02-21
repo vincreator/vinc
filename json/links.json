@@ -2,25 +2,25 @@
     {
         "name": "Telegram",
         "color": "blue",
-        "icon": "web",
+        "icon": "telegram",
         "url": "https://t.me/Namexon"
-	},
-    {
-        "name": "Discord",
-        "color": "red",
-        "icon": "web",
-        "url": "https://google.com"
-	},
-    {
-        "name": "Github",
-        "color": "red",
-        "icon": "web",
-        "url": "https://google.com"
 	},
     {
         "name": "Instagram",
         "color": "red",
-        "icon": "web",
+        "icon": "instagram",
+        "url": "https://google.com"
+	},
+    {
+        "name": "Github",
+        "color": "black",
+        "icon": "github",
+        "url": "https://google.com"
+	},
+    {
+        "name": "Discord",
+        "color": "blue",
+        "icon": "discord",
         "url": "https://google.com"
 	}
 ]
