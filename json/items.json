@@ -1,26 +1,26 @@
 [
     {
-        "name": "Eunha BoT",
+        "name": "Eunha Discord BoT",
         "description": "Eunha is a Discord music bot,focus on audio. \n click visit to invite this bot to your channel on discord. \n have fun 😘",
         "image": "images/image1.jpg",
         "link": "https://discordapp.com/oauth2/authorize?client_id=610409589166571540&permissions=8&redirect_uri=https%3A%2F%2Fdiscordapp.com%2Foauth2%2Fauthorize%3Fclient_id%3D&scope=bot"
 	},
     {
-        "name": "Project 2",
-        "description": "This is where you put description about your projects.",
+        "name": "Telegram Eunha Gdrive Clone",
+        "description": "This bot can clone gdrive link from Gdrive \n and you can download it by index link. \n click visit to use this bot. ",
         "image": "images/image2.jpg",
-        "link": "https://google.com"
+        "link": "http://t.me//EunhaGdriveBot"
 	},
     {
-        "name": "Project 3",
-        "description": "This is where you put description about your projects.",
+        "name": "Telegram Eunha Deezer downloader",
+        "description": "This boot is great for downloading music from Deezer \n just send the Deezer link the album / single track. \n and it will send it to you automatically. \n click visit to go to the bot. \n don't forget to use help.",
         "image": "images/image3.jpg",
-        "link": "https://google.com"
+        "link": "https://t.me/eunhadeezbot"
 	},
     {
-        "name": "Project 4",
-        "description": "This is where you put description about your projects.",
+        "name": "Telegram Eunha mirror bot",
+        "description": "The best bot to download any direct link and upload it to gdrive. \n This bot has many functions such as downloading torrent and YouTube \n even YouTube playlists 😅 \n click visit to see the bot.",
         "image": "images/image4.jpg",
-        "link": "https://google.com"
+        "link": "https://t.me/EunhaMirrorRoom"
 	}
 ]
