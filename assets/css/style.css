@@ -1,7 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
-  background: #fff;
+  background: rgba(255, 255, 255, 0);
   font: 100% system-ui;
 }
 
@@ -67,7 +67,13 @@ body.dark-theme p {
 body.dark-theme a {
   color: #809fff;
 }
-
+/*
+canvas{
+	position:absolute;
+	top:0;
+	left:0;
+}
+*/
 .highlight {
   color: rgb(255, 253, 253);
 }
