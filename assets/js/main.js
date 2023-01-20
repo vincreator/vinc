@@ -51,6 +51,14 @@
     })
   }
 
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (prefersDarkScheme.matches) {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+  
   let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
