@@ -1,7 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
-  background-color:#eeeeee;
+  background-color: #eeeeee;
   background: rgba(255, 255, 255, 0);
   font: 100% system-ui;
 }
@@ -20,6 +20,7 @@ h1,
 p {
   color: #222;
 }
+
 h2,
 h3,
 h4,
@@ -61,10 +62,12 @@ h6 {
 body.dark-theme {
   background: #121212;
 }
+
 body.dark-theme h1,
 body.dark-theme p {
   color: #eee;
 }
+
 body.dark-theme a {
   color: #809fff;
 }
@@ -194,7 +197,7 @@ a{
   -webkit-animation: spin-two 2s infinite linear;
   animation: spin-two 2s infinite linear;
 }
-and this */ 
+and this */
 #preloader {
   position: fixed;
   top: 0;
