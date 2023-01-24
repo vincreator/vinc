@@ -177,8 +177,7 @@ Chart.defaults.global = {
   tooltipFontColor: "#fff",
 
   // String - Tooltip title font declaration for the scale label
-  tooltipTitleFontFamily:
-  "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+  tooltipTitleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
   // Number - Tooltip title font size in pixels
   tooltipTitleFontSize: 14,
@@ -214,32 +213,33 @@ Chart.defaults.global = {
   onAnimationProgress: function () {},
 
   // Function - Will fire on animation completion.
-  onAnimationComplete: function () {} };
-
+  onAnimationComplete: function () {},
+};
 
 // BEGIN POLAR DATA ============================================
 
 const barData = {
   labels: ["January", "February", "March", "April", "May", "June", "July"],
   datasets: [
-  {
-    label: "My First dataset",
-    fillColor: "rgba(220,220,220,0.5)",
-    strokeColor: "rgba(220,220,220,0.8)",
-    highlightFill: "rgba(220,220,220,0.75)",
-    highlightStroke: "rgba(220,220,220,1)",
-    data: [35, 59, 80, 81, 56, 55, 40] },
+    {
+      label: "My First dataset",
+      fillColor: "rgba(220,220,220,0.5)",
+      strokeColor: "rgba(220,220,220,0.8)",
+      highlightFill: "rgba(220,220,220,0.75)",
+      highlightStroke: "rgba(220,220,220,1)",
+      data: [35, 59, 80, 81, 56, 55, 40],
+    },
 
-  {
-    label: "My Second dataset",
-    fillColor: "rgba(151,187,205,0.5)",
-    strokeColor: "rgba(151,187,205,0.8)",
-    highlightFill: "rgba(151,187,205,0.75)",
-    highlightStroke: "rgba(151,187,205,1)",
-    data: [28, 48, 40, 19, 86, 27, 90] }] };
-
-
-
+    {
+      label: "My Second dataset",
+      fillColor: "rgba(151,187,205,0.5)",
+      strokeColor: "rgba(151,187,205,0.8)",
+      highlightFill: "rgba(151,187,205,0.75)",
+      highlightStroke: "rgba(151,187,205,1)",
+      data: [28, 48, 40, 19, 86, 27, 90],
+    },
+  ],
+};
 
 const barOptions = {
   //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
@@ -274,8 +274,8 @@ const barOptions = {
 
   //String - A legend template
   legendTemplate:
-  '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>' };
-
+    '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+};
 
 const barCtx = document.getElementById("myBarGraph").getContext("2d");
 
@@ -284,37 +284,41 @@ const myBarChart = new Chart(barCtx).Bar(barData, barOptions);
 // BEGIN POLAR DATA ============================================
 
 const polarData = [
-{
-  value: 300,
-  color: "#F7464A",
-  highlight: "#FF5A5E",
-  label: "Red" },
+  {
+    value: 300,
+    color: "#F7464A",
+    highlight: "#FF5A5E",
+    label: "Red",
+  },
 
-{
-  value: 50,
-  color: "#46BFBD",
-  highlight: "#5AD3D1",
-  label: "Green" },
+  {
+    value: 50,
+    color: "#46BFBD",
+    highlight: "#5AD3D1",
+    label: "Green",
+  },
 
-{
-  value: 100,
-  color: "#FDB45C",
-  highlight: "#FFC870",
-  label: "Yellow" },
+  {
+    value: 100,
+    color: "#FDB45C",
+    highlight: "#FFC870",
+    label: "Yellow",
+  },
 
-{
-  value: 40,
-  color: "#949FB1",
-  highlight: "#A8B3C5",
-  label: "Grey" },
+  {
+    value: 40,
+    color: "#949FB1",
+    highlight: "#A8B3C5",
+    label: "Grey",
+  },
 
-{
-  value: 120,
-  color: "#4D5360",
-  highlight: "#616774",
-  label: "Dark Grey" }];
-
-
+  {
+    value: 120,
+    color: "#4D5360",
+    highlight: "#616774",
+    label: "Dark Grey",
+  },
+];
 
 const polarOptions = {
   //Boolean - Show a backdrop to the scale label
@@ -358,8 +362,8 @@ const polarOptions = {
 
   //String - A legend template
   legendTemplate:
-  '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>' };
-
+    '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>',
+};
 
 const polarCtx = document.getElementById("myPolarGraph").getContext("2d");
 const myPolarChart = new Chart(polarCtx).PolarArea(polarData, polarOptions);
@@ -369,28 +373,29 @@ const myPolarChart = new Chart(polarCtx).PolarArea(polarData, polarOptions);
 const lineGraphData = {
   labels: ["January", "February", "March", "April", "May", "June", "July"],
   datasets: [
-  {
-    label: "My First dataset",
-    fillColor: "rgba(220,220,220,0.2)",
-    strokeColor: "rgba(220,220,220,1)",
-    pointColor: "rgba(220,220,220,1)",
-    pointStrokeColor: "#fff",
-    pointHighlightFill: "#fff",
-    pointHighlightStroke: "rgba(220,220,220,1)",
-    data: [10, 59, 80, 81, 56, 55, 40] },
+    {
+      label: "My First dataset",
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+      data: [10, 59, 80, 81, 56, 55, 40],
+    },
 
-  {
-    label: "My Second dataset",
-    fillColor: "rgba(151,187,205,0.2)",
-    strokeColor: "rgba(151,187,205,1)",
-    pointColor: "rgba(151,187,205,1)",
-    pointStrokeColor: "#fff",
-    pointHighlightFill: "#fff",
-    pointHighlightStroke: "rgba(151,187,205,1)",
-    data: [28, 48, 40, 19, 86, 27, 90] }] };
-
-
-
+    {
+      label: "My Second dataset",
+      fillColor: "rgba(151,187,205,0.2)",
+      strokeColor: "rgba(151,187,205,1)",
+      pointColor: "rgba(151,187,205,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(151,187,205,1)",
+      data: [28, 48, 40, 19, 86, 27, 90],
+    },
+  ],
+};
 
 const lineGraphOptions = {
   ///Boolean - Whether grid lines are shown across the chart
@@ -437,8 +442,8 @@ const lineGraphOptions = {
 
   //String - A legend template
   legendTemplate:
-  '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].strokeColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>' };
-
+    '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].strokeColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+};
 
 const lineCtx = document.getElementById("myGraph").getContext("2d");
 const myLineChart = new Chart(lineCtx).Line(lineGraphData, lineGraphOptions);
@@ -448,18 +453,18 @@ const myLineChart = new Chart(lineCtx).Line(lineGraphData, lineGraphOptions);
 const radarData = {
   labels: ["Ford", "Chevy", "Toyota", "Honda", "Mazda"],
   datasets: [
-  {
-    label: "My First dataset",
-    fillColor: "rgba(22,170,133,0.2)",
-    strokeColor: "rgba(22,160,133,1)",
-    pointColor: "rgba(22,160,133,1)",
-    pointStrokeColor: "#fff",
-    pointHighlightFill: "#ccc",
-    pointHighlightStroke: "rgba(22,160,133,1)",
-    data: [12, 3, 5, 18, 7] }] };
-
-
-
+    {
+      label: "My First dataset",
+      fillColor: "rgba(22,170,133,0.2)",
+      strokeColor: "rgba(22,160,133,1)",
+      pointColor: "rgba(22,160,133,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#ccc",
+      pointHighlightStroke: "rgba(22,160,133,1)",
+      data: [12, 3, 5, 18, 7],
+    },
+  ],
+};
 
 const radarOptions = {
   ///Boolean - Whether grid lines are shown across the chart
@@ -506,8 +511,8 @@ const radarOptions = {
 
   //String - A legend template
   legendTemplate:
-  '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].strokeColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>' };
-
+    '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].strokeColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+};
 
 const radarCtx = document.getElementById("myRadarGraph").getContext("2d");
 const myRadarChart = new Chart(radarCtx).Radar(radarData, radarOptions);
@@ -515,25 +520,27 @@ const myRadarChart = new Chart(radarCtx).Radar(radarData, radarOptions);
 // BEGIN PIE CHART ============================================
 
 const pieData = [
-{
-  value: 300,
-  color: "#F7464A",
-  highlight: "#FF5A5E",
-  label: "Red" },
+  {
+    value: 300,
+    color: "#F7464A",
+    highlight: "#FF5A5E",
+    label: "Red",
+  },
 
-{
-  value: 50,
-  color: "#46BFBD",
-  highlight: "#5AD3D1",
-  label: "Green" },
+  {
+    value: 50,
+    color: "#46BFBD",
+    highlight: "#5AD3D1",
+    label: "Green",
+  },
 
-{
-  value: 100,
-  color: "#FDB45C",
-  highlight: "#FFC870",
-  label: "Yellow" }];
-
-
+  {
+    value: 100,
+    color: "#FDB45C",
+    highlight: "#FFC870",
+    label: "Yellow",
+  },
+];
 
 const pieOptions = {
   //Boolean - Whether we should show a stroke on each segment
@@ -562,8 +569,8 @@ const pieOptions = {
 
   //String - A legend template
   legendTemplate:
-  '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>' };
-
+    '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>',
+};
 
 const pieCtx = document.getElementById("myPieGraph").getContext("2d");
 const myPieChart = new Chart(pieCtx).Pie(pieData, pieOptions);
@@ -571,25 +578,27 @@ const myPieChart = new Chart(pieCtx).Pie(pieData, pieOptions);
 // BEGIN DOUGHNUT CHART ============================================
 
 const doughnutData = [
-{
-  value: 300,
-  color: "#F7464A",
-  highlight: "#FF5A5E",
-  label: "Red" },
+  {
+    value: 300,
+    color: "#F7464A",
+    highlight: "#FF5A5E",
+    label: "Red",
+  },
 
-{
-  value: 50,
-  color: "#46BFBD",
-  highlight: "#5AD3D1",
-  label: "Green" },
+  {
+    value: 50,
+    color: "#46BFBD",
+    highlight: "#5AD3D1",
+    label: "Green",
+  },
 
-{
-  value: 100,
-  color: "#FDB45C",
-  highlight: "#FFC870",
-  label: "Yellow" }];
-
-
+  {
+    value: 100,
+    color: "#FDB45C",
+    highlight: "#FFC870",
+    label: "Yellow",
+  },
+];
 
 const doughnutOptions = {
   //Boolean - Whether we should show a stroke on each segment
@@ -618,11 +627,12 @@ const doughnutOptions = {
 
   //String - A legend template
   legendTemplate:
-  '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>' };
-
+    '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>',
+};
 
 const doughnutCtx = document.getElementById("myDoughnutGraph").getContext("2d");
 
 const myDoughnutChart = new Chart(doughnutCtx).Doughnut(
-doughnutData,
-doughnutOptions);
+  doughnutData,
+  doughnutOptions
+);
