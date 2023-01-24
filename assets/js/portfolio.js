@@ -1,44 +1,82 @@
-var data = [
-  { y: '2014', a: 50, b: 90},
-  { y: '2015', a: 65,  b: 75},
-  { y: '2016', a: 50,  b: 50},
-  { y: '2017', a: 75,  b: 60},
-  { y: '2018', a: 80,  b: 65},
-  { y: '2019', a: 90,  b: 70},
-  { y: '2020', a: 100, b: 75},
-  { y: '2021', a: 115, b: 75},
-  { y: '2022', a: 120, b: 85},
-  { y: '2023', a: 145, b: 85},
-  { y: '2024', a: 160, b: 95}
-],
-config = {
-  data: data,
-  xkey: 'y',
-  ykeys: ['a', 'b'],
-  labels: ['Total Income', 'Total Outcome'],
-  fillOpacity: 0.6,
-  hideHover: 'auto',
-  behaveLikeLine: true,
-  resize: true,
-  pointFillColors:['#ffffff'],
-  pointStrokeColors: ['black'],
-  lineColors:['gray','red']
-};
-config.element = 'area-chart';
-Morris.Area(config);
-config.element = 'line-chart';
-Morris.Line(config);
-config.element = 'bar-chart';
-Morris.Bar(config);
-config.element = 'stacked';
-config.stacked = true;
-Morris.Bar(config);
-Morris.Donut({
-element: 'pie-chart',
-data: [
-{label: "Income", value: 30},
-{label: "Supply", value: 15},
-{label: "Client", value: 45},
-{label: "Demand", value: 10}
-]
+window.addEventListener("DOMContentLoaded", () => {
+  const clock = new BouncyBlockClock(".clock");
 });
+
+class BouncyBlockClock {
+  constructor(qs) {
+    this.el = document.querySelector(qs);
+    this.time = { a: [], b: [] };
+    this.rollClass = "clock__block--bounce";
+    this.digitsTimeout = null;
+    this.rollTimeout = null;
+    this.mod = 0 * 60 * 1000;
+
+    this.loop();
+  }
+  animateDigits() {
+    const groups = this.el.querySelectorAll("[data-time-group]");
+
+    Array.from(groups).forEach((group, i) => {
+      const { a, b } = this.time;
+
+      if (a[i] !== b[i]) group.classList.add(this.rollClass);
+    });
+
+    clearTimeout(this.rollTimeout);
+    this.rollTimeout = setTimeout(this.removeAnimations.bind(this), 900);
+  }
+  displayTime() {
+    // screen reader time
+    const timeDigits = [...this.time.b];
+    const ap = timeDigits.pop();
+
+    this.el.ariaLabel = `${timeDigits.join(":")} ${ap}`;
+
+    // displayed time
+    Object.keys(this.time).forEach((letter) => {
+      const letterEls = this.el.querySelectorAll(`[data-time="${letter}"]`);
+
+      Array.from(letterEls).forEach((el, i) => {
+        el.textContent = this.time[letter][i];
+      });
+    });
+  }
+  loop() {
+    this.updateTime();
+    this.displayTime();
+    this.animateDigits();
+    this.tick();
+  }
+  removeAnimations() {
+    const groups = this.el.querySelectorAll("[data-time-group]");
+
+    Array.from(groups).forEach((group) => {
+      group.classList.remove(this.rollClass);
+    });
+  }
+  tick() {
+    clearTimeout(this.digitsTimeout);
+    this.digitsTimeout = setTimeout(this.loop.bind(this), 1e3);
+  }
+  updateTime() {
+    const rawDate = new Date();
+    const date = new Date(Math.ceil(rawDate.getTime() / 1e3) * 1e3 + this.mod);
+    let h = date.getHours();
+    const m = date.getMinutes();
+    const s = date.getSeconds();
+    const ap = h < 12 ? "AM" : "PM";
+
+    if (h === 0) h = 12;
+    if (h > 12) h -= 12;
+
+    this.time.a = [...this.time.b];
+    this.time.b = [
+      h < 10 ? `0${h}` : `${h}`,
+      m < 10 ? `0${m}` : `${m}`,
+      s < 10 ? `0${s}` : `${s}`,
+      ap,
+    ];
+
+    if (!this.time.a.length) this.time.a = [...this.time.b];
+  }
+}
