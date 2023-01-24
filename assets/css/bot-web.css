@@ -65,3 +65,20 @@
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
+
+body.dark-theme {
+  background: #121212;
+}
+
+body.dark-theme h1,
+body.dark-theme p {
+  color: #eee;
+}
+
+body.dark-theme a {
+  color: #809fff;
+}
+
+.highlight {
+  color: rgb(255, 253, 253);
+}
