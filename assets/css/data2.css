@@ -1,10 +1,3 @@
-#area-chart,
-#line-chart,
-#bar-chart,
-#stacked,
-#pie-chart {
-  min-height: 250px;
-}
 * {
   border: 0;
   box-sizing: border-box;
