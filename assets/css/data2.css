@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+
 :root {
   --hue: 42;
   --bg: hsl(var(--hue), 90%, 90%);
@@ -12,6 +13,7 @@
   --trans-dur: 0.3s;
   font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
 }
+
 body {
   background-color: var(--bg);
   color: var(--fg);
@@ -28,6 +30,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
+
 .clock__block {
   background-color: hsl(var(--hue), 10%, 90%);
   border-radius: 0.5rem;
@@ -41,6 +44,7 @@ body {
   height: 6rem;
   transition: background-color var(--trans-dur), box-shadow var(--trans-dur);
 }
+
 .clock__block--small {
   border-radius: 0.25rem;
   box-shadow: 0 0.5rem 2rem hsla(var(--hue), 90%, 50%, 0.3);
@@ -49,12 +53,14 @@ body {
   width: 3rem;
   height: 3rem;
 }
+
 .clock__colon {
   display: none;
   font-size: 2em;
   opacity: 0.5;
   position: relative;
 }
+
 .clock__colon:before,
 .clock__colon:after {
   background-color: currentColor;
@@ -68,31 +74,39 @@ body {
   height: 0.1em;
   transition: background-color var(--trans-dur);
 }
+
 .clock__colon:before {
   transform: translateY(-200%);
 }
+
 .clock__colon:after {
   transform: translateY(200%);
 }
+
 .clock__digit-group {
   display: flex;
   flex-direction: column-reverse;
 }
+
 .clock__digits {
   width: 100%;
   height: 100%;
 }
+
 .clock__block--bounce {
   animation: bounce 0.75s;
 }
+
 .clock__block--bounce .clock__digit-group {
   animation: roll 0.75s ease-in-out forwards;
   transform: translateY(-50%);
 }
+
 .clock__block--delay1,
 .clock__block--delay1 .clock__digit-group {
   animation-delay: 0.1s;
 }
+
 .clock__block--delay2,
 .clock__block--delay2 .clock__digit-group {
   animation-delay: 0.2s;
@@ -104,10 +118,12 @@ body {
     --bg: hsl(var(--hue), 10%, 10%);
     --fg: hsl(var(--hue), 10%, 90%);
   }
+
   .clock__block {
     background-color: hsl(var(--hue), 90%, 40%);
     box-shadow: 0 1rem 2rem hsla(var(--hue), 90%, 60%, 0.4);
   }
+
   .clock__block--small {
     box-shadow: 0 0.5rem 2rem hsla(var(--hue), 90%, 60%, 0.4);
   }
@@ -118,6 +134,7 @@ body {
   .clock {
     flex-direction: row;
   }
+
   .clock__colon {
     display: inherit;
   }
@@ -130,15 +147,18 @@ body {
     animation-timing-function: ease-in;
     transform: translateY(0);
   }
+
   50% {
     animation-timing-function: ease-out;
     transform: translateY(15%);
   }
 }
+
 @keyframes roll {
   from {
     transform: translateY(-50%);
   }
+
   to {
     transform: translateY(0);
   }

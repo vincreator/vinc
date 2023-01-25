@@ -210,10 +210,10 @@ Chart.defaults.global = {
   multiTooltipTemplate: "<%= value %>",
 
   // Function - Will fire on animation progression.
-  onAnimationProgress: function () {},
+  onAnimationProgress: function () { },
 
   // Function - Will fire on animation completion.
-  onAnimationComplete: function () {},
+  onAnimationComplete: function () { },
 };
 
 // BEGIN POLAR DATA ============================================
