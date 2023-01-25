@@ -596,10 +596,10 @@ section {
 }
 
 .skiltext {
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   text-align: center;
   position: relative;
-  color: #6a5750;
+  color: #1d55d6;
   font-size: 36px;
   width: 110%;
 }
