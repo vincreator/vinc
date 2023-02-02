@@ -636,3 +636,4 @@ const myDoughnutChart = new Chart(doughnutCtx).Doughnut(
   doughnutData,
   doughnutOptions
 );
+
