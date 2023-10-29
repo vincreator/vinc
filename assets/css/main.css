@@ -587,7 +587,15 @@ section {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
 }
-
+.skills .skiltext {
+  font-family: sans-serif;
+  text-align: center;
+  position: relative;
+  color: #1d55d6;
+  font-size: 36px;
+  width: 100%; /* Set the width to 100% to center-align it */
+  margin: 0 auto; /* Center the element horizontally */
+}
 .skills {
   width: 100%;
   position: relative;
